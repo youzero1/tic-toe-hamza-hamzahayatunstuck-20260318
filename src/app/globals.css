@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 15, 23, 42;
+  --background-rgb: 248, 250, 252;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.cell-pop {
+  animation: pop 0.2s ease-out forwards;
+}
+
+@keyframes winner-pulse {
+  0%, 100% { background-color: rgba(250, 204, 21, 0.3); }
+  50% { background-color: rgba(250, 204, 21, 0.6); }
+}
+
+.winner-cell {
+  animation: winner-pulse 1s ease-in-out infinite;
+}
